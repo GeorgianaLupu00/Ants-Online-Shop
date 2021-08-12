@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="keywords" content="Furnici,Ferma,Informatii,Quiz">
+        <meta name="description" content="ANTS SHOP">
+        
+        <title>PETSHOP SPECIAL DE FURNICI</title>
+        
+        
+        <%- include("../fragmente/head") %>
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+    </head>
+    
+    <body>
+    <%- include("../fragmente/header_nav") %>
+    <p id="watermark"></p> 
+
+        
+        <main>
+            <div class="container">
+
+                <div id="layout_1">
+                    <article>
+                        <h2>Prezentare Site</h2>
+                        <div id = "text">
+                            <p class="intro"><br>Sperăm să vă bucurați<br> de explorarea<br> conținutului bogat<br> de pe acest site.
+                            <br>Aflați <br> totul: de la care furnici <br> sunt benefice grădinii <abbr title="dumneavoastra">dvs.</abbr>
+                            la cum să <br> construiți o fermă de furnici <br> și ce colegii au cele mai bune
+                            programe de <dfn>entomologie</dfn>(<br>Ramură a zoologiei<br> care se ocupă <br> cu studiul insectelor) și
+                            <br>cum să <br>controlați coloniile<br> de furnici nedorite în<br> și în jurul casei <abbr title="dumneavoastra">dvs.</abbr>
+                        </p>
+                       </div> 
+                    </article>
+                    <%- include("../fragmente/galerie") %>
+                    <!-- <%- include("../fragmente/gal_animata") %> -->
+
+                </div>
+
+                <div id="layout_2">
+                    <div> <i class="fas fa-cog fa-spin"></i></div><h2>Profit Lunar</h2>
+                    <div class="tabel_cont">
+                        <table id="tabel">
+                            <thead>
+
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Data</th>
+                                    <th>Specie</th>
+                                    <th>Nr. furnici</th>
+                                    <th>Pret per. 100 furnici</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>12.03.2021</td>
+                                    <td>Furnicile Citronella</td>
+                                    <td>300</td>
+                                    <td>20 lei</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>22</td>
+                                    <td>12.03.2021</td>
+                                    <td>Furnici Carpenter</td>
+                                    <td>2000</td>
+                                    <td>15 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>07</td>
+                                    <td>26.03.2021</td>
+                                    <td>Furnici Amazon</td>
+                                    <td>500</td>
+                                    <td>35 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>34</td>
+                                    <td>28.03.2021</td>
+                                    <td>Furnici Honeypot</td>
+                                    <td>200</td>
+                                    <td>20 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>23</td>
+                                    <td>28.03.2021</td>
+                                    <td>Furnicile Faraonului</td>
+                                    <td>700</td>
+                                    <td>50 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>05</td>
+                                    <td>29.03.2021</td>
+                                    <td>Furnicile Acrobat</td>
+                                    <td>600</td>
+                                    <td>25 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>09</td>
+                                    <td>30.03.2021</td>
+                                    <td>Furnici Tesatoare</td>
+                                    <td>3000</td>
+                                    <td>70 lei</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Numar total de furnici</td>
+                                    <td>7380 furnici</td>
+                                
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Profil total</td>
+                                    <td>3175 lei</td>
+                                </tr>
+                            </tfoot>
+                        </table> 
+                    </div>
+                </div>
+
+                <div id="layout_3">
+                    <div><i class="far fa-calendar">Calendar</i></div>
+                    <section id="sectiune-galerie-animata">
+                        <div id="galerie-animata" class="galerie-a">
+                            <% for (let imag of locals.imagini){  %>
+                                <!--<figure>
+                                    <img src="/<%-imag.mare%>" alt="briose">
+                                    <figcaption>Briose</figcaption>
+                                    </figure>-->
+                                    <figure>
+                                <picture>
+                                    <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                                    <source srcset="/<%-imag.mic%>" media="(max-width:700px)"/>
+                                    <img src="/<%-imag.mare%>" alt="text"/>
+                                </picture>
+                                <figcaption><%-imag.descriere%></figcaption>
+                            </figure>
+                            <% } %>
+                        </div>
+                    </section>
+				    
+                </div>
+
+                <div id="layout_4">
+                    <section id="anunturi">
+                        <h2>Anunțuri</h2>
+                        <p><time datetime="2020-07-05">5 iulie 2020</time> Am primit o noua specie de furnici tesatoare</p>
+                        <p><time datetime="2020-09-15">15 septembrie 2020</time> Toate comenzile de ACVARIU TIP B,
+                            inregistrate azi vin insotite de un musuroi artificial CADOU.</p>
+                        <p><time datetime="2020-12-20">20 decembrie 2020</time> Magazinul va ramane deschis doar 2 ore pe zi pana dupa sarbatori</p>
+                        <p><time datetime="2020-12-28">28 decembrie 2020</time> Nu inregistram comenzi in urmatoarele 3 zile</p>
+                        <p><time datetime="2021-01-07">7 ianuarie 2021</time>Avem un angajat nou, veniti sa il salutati! </p>
+                        <p><time datetime="2021-02-11">11 februarie 2021</time> Stoc nou de soluri negre!</p>
+                    </section>
+                </div>
+
+                <div id="layout_5">
+                    <h2>Lista de utilizatori online </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere cupiditate quis magni facilis totam cumque aspernatur omnis recusandae. Itaque, eaque est. Necessitatibus soluta ipsam accusamus temporibus sunt doloribus excepturi.</p>
+                </div>
+
+                <div id="layout_6">
+                    <div><i class="fa fa-user-circle-o">Date despre utilizator si statistici</i></div>
+                    <%- adresa %>
+                </div>
+
+                <div id="layout_7">
+                    <h2>Date despre site și server</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod omnis culpa dolores repudiandae, ipsam corporis quos aliquid, iste aspernatur tempore suscipit natus labore! Ab sint vitae deserunt eos molestias quia.</p>
+                </div>
+
+                <div id="layout_8">
+                    <section>
+                        <h2>Fun Facts</h2>
+                            <p>Acesta este site-ul pentru toate furnicile. Indiferent dacă sunteți un pasionat de furnici,
+                            <mark>fermier</mark> de furnici sau pur și simplu curios de aceste insecte uimitoare, acesta este site-ul pentru <abbr title="dumneavoastra">dvs.</abbr>
+                            </p>
+                            <article><h3>Detalii</h3>
+                                <p>Furnicile sunt creaturi fascinante și benefice, dar uneori preferăm să le savurăm la distanță. În această secțiune</p>
+                                <p> veți vedea zeci de articole despre cum să controlați eficient furnicile în și în jurul casei dvs</p>
+                                <p>Dacă credeți că aveți nevoie de ajutor profesional pentru combaterea furnicilor și locuiți într-una din zonele de servicii</p>
+                                <p>din Statele Unite acoperite de Bulwark Exterminating, vă oferim acoperire. Verificați această hartă pentru a vedea dacă locuiți</p>
+                                <p>într-una din zonele de servicii Bulwark, apoi completați un formular de cerere de ofertă și un boom, un membru prietenos al</p>                                     
+                                <p>Bulwark Team vă va contacta în curând pentru a vă oferi un preț excelent pentru combaterea dăunătorilor la domiciliu.</p>
+                                <p>Și acum, așa cum am promis, iată câteva conținut minunat despre controlul furnicilor în și în jurul casei tale.</p>
+                                    <dl>
+                                        <dt><mark>Ferme de furnici</mark></dt>
+                                        <dd>Un acvariu în care în locul peștilor trăiesc furnici.
+                                            Prindeți furnicile din pădure și urmăriți ce viață minunată au.</dd>
+                                        <dt><mark>Locatie fizica ferme</mark></dt>
+                                        <dd>Garden Farm: Strada Dr. Iacob Felix nr. 3, București 011031</dd>
+                                    </dl>
+
+                                <video id="video" controls preload="metadata" poster="/resurse/imagini/joc.jpg">
+                            
+                                    <source src="/resurse/video/video11.mp4" type="video/mp4">
+                                    <source src="/resurse/video/video11.ogv" type="video/ogv">
+                                    <track label="Romana" kind="captions" srclang="ro" src="/resurse/video/tracks/[Romanian] The World War of the Ants – The Army Ant [DownSub.com].vtt" default>
+                                    <track label="English" kind="captions" srclang="en" src="/resurse/video/tracks/[English] The World War of the Ants – The Army Ant [DownSub.com].vtt">
+                                </video>
+                                <hr class="bara"/>
+                                
+                                <div class="taburi">
+                                    <div class='row'>
+                                        <iframe name="video" src="https://www.youtube.com/embed/rW3CSMx2bX4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    </div>
+                                    <div class='row2'>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/rW3CSMx2bX4" target="video">Furnica1</a>
+                                        </div>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/7_e0CA_nhaE" target="video" >Furnica2</a>
+                                        </div>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/8y5dOk8XiKA" target="video" >Furnica3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                    </section>
+                    
+                    <aside>
+                        <details>
+                            <summary>Oferte</summary>
+                            <p>Pentru a beneficia de oferta de 10% trebuie sa va abonati la newsletter:</p>
+                            <ol>
+                                <li><a href="abonare.html">Newsletter</a></li>
+                                <li><a href="reducere.html">Coduri de reducere</a></li>
+                                <li><a href="intrebari.html">Intrebari si raspunsuri</a></li>
+                            </ol>
+                        </details>
+                        <p>Sa facem cunostinta cu cele mai sociabile <mark>insecte!</mark></p>
+                        <div class="link">
+                            <a href="https://ants.com/" target="_blank">Visit ANTS.com!</a>
+                        </div>
+                        <button onclick= "window.print()">Printeaza</button>
+                    </aside>
+                </div>
+
+            </div>
+
+            <%- include("../fragmente/footer") %>
+           
+            
+            <div class="banner">
+                Acesta este un proiect scolar
+            </div>
+
+        </main>
+
+    </body>
+</html>

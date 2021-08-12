@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="keywords" content="magazin de furnici- de cumparat:Furnici,Ferme, acvarii">
+        <meta name="description" content="Comanda">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css"/>
+    
+      
+        <title>Produse</title>
+        
+        <%- include("../fragmente/head") %>
+
+        <script>
+            console.log("aici");
+            window.onload=function(){
+                let btn = document.getElementById("filtreaza");
+                btn.onclick = function(){
+                    //dimensiune
+                    let elemInput = document.getElementById("dim-max");
+                    let dimens = elemInput.value;
+                    //pret
+                    elemInput = document.getElementById("pret-minim");
+                    let pretMax = elemInput.value;
+                    //livrare
+                    elemInput = document.getElementById("i_check1");
+                    let livrare = elemInput.checked.toString();
+                    //nume
+                    elemInput = document.getElementById("i_text");
+                    let text = elemInput.value.toString();
+                    //select simplu
+                    elemInput = document.getElementById("i_sel_simplu");
+                    let subcategorie = elemInput.value.toLowerCase();
+                    //select multiplu
+                    let optiuni=document.getElementById("i_sel_multiplu").options;		
+                        let sir="";
+                        for(let opt of optiuni){
+                                if(opt.selected)
+                                sir+=opt.value+" ";
+                        }
+                    sir = sir.toLowerCase();
+
+                    //textarea
+                    elemInput = document.getElementById("i_textarea")
+                    let textaree = elemInput.value;
+                    
+                    console.log(dimens);
+                    console.log(livrare);
+                    let produse = document.getElementsByClassName("produs");
+                    for( let prod of produse){
+                        prod.style.display= "none";
+                        //dimensiune
+                        let dimensi =parseInt(prod.getElementsByClassName("val-dimensiune")[0].innerHTML);
+                        var conditie1 = dimensi < dimens; 
+                        //pret
+                        let pret =parseInt(prod.getElementsByClassName("val-pret")[0].innerHTML);
+                        var conditie2 = pret < pretMax; 
+                        //livrare
+                        let livr = prod.getElementsByClassName("val-livrare")[0].innerHTML.toString();
+                        var conditie3 = (livr == livrare);
+                        //nume
+                        let text1 = prod.getElementsByClassName("val-nume")[0].innerHTML.toString();
+                        var conditie4 = text1.toLowerCase().includes(text);
+                        console.log(conditie4);
+                        //select simplu
+                        let specie = prod.getElementsByClassName("val-specie")[0].innerHTML.toString();
+                        var conditie5 = (specie == subcategorie);
+                        console.log(conditie5);
+                        //select multiplu
+                        let culor = prod.getElementsByClassName("val-culoare")[0].innerHTML.toString();
+                        var conditie6 = sir.includes(culor);
+                        //textarea
+                        let textareaa =  prod.getElementsByClassName("val-descriere")[0].innerHTML.toString();
+                        var conditie7 = textareaa.includes(textaree)
+
+                        conditieTotala = conditie1 && conditie2 && conditie3 && conditie6 && conditie7;
+
+                        if(conditieTotala){
+                            prod.style.display= "block";
+                        }
+                    }
+                }
+                btn = document.getElementById("reseteaza");
+                btn.onclick = function(){
+                    let produse = document.getElementsByClassName("produs");
+                    for( let prod of produse){
+                        prod.style.display= "block";}
+                }
+                
+                btn = document.getElementById("sortCrescNume");
+                btn.onclick = function(){    
+                //     const nume_asc = client.query("select * from produse order by nume asc");
+                //     console.log(nume_asc);
+                // }
+                
+                    // client.connect(function(err) {
+                    // if (err) throw err;
+                    //     client.query("SELECT * FROM produse ORDER BY nume", function (err, result) {
+                    //     if (err) throw err;
+                    //         console.log(result);
+                    //     });
+                    // });
+                }
+                function sortArticole(factor){
+        
+                var produse=document.getElementsByClassName("produs");
+                let arrayProduse=Array.from(produse);
+                arrayProduse.sort(function(art1,art2){
+                    let nume1=art1.getElementsByClassName("val-nume")[0].innerHTML;
+                    let nume2=art2.getElementsByClassName("val-nume")[0].innerHTML;
+                    return factor*nume1.localeCompare(nume2);
+                });
+                console.log(arrayProduse); 
+                for (let prod of arrayProduse){
+                    prod.parentNode.appendChild(prod);
+                    }
+                }
+
+                btn = document.getElementById("sortCrescNume");
+                btn.onclick=function(){
+                    sortArticole(1);
+                }
+                btn = document.getElementById("sortDescrescNume");
+                btn.onclick=function(){
+                    sortArticole(-1);     
+                }  
+            }
+    
+    </script>
+    </head>
+    
+    <body>
+    <%- include("../fragmente/header_nav") %>
+
+        
+        <main>
+            <div class=form><br>
+
+                <label>Dimensiune maxima:
+                    <input type = "number" id ="dim-max" value= "120"><button id="filtreaza">Filtreaza</button>
+                    <button id="reseteaza">Reseteaza</button>
+                </label>
+
+                <label> Pret minim: <input type="range" id="pret-minim" value="0" min="0"  max="3000"></label>
+                <!-- <input type="number" id="pret-minim"> <button id="filtreaza">Filtreaza</button> -->
+                <label>Livrare :
+                    <input id="i_check1" name="gr_livrare" checked value="10" type="checkbox"/>
+                </label>
+                <!-- <div>
+                    <label>Curier
+                        <input id="i_rad1" checked name="gr_chck" value="fals" type="radio"/>
+                    </label>
+                    <label>Posta
+                        <input id="i_rad2" name="gr_chck" value="true" type="radio"/>
+                    </label>
+                </div>  -->
+
+                <div>
+                    <label>Nume:
+                        <input id="i_text" type="text" value="abc">
+                    </label>
+                </div>
+                
+                <div>
+                    <label>Select simplu(subcategorie-specie):
+                        <select id="i_sel_simplu">
+                            <option value="furnicus" selected>Furnicus</option>
+                            <option value="invincible" >Invincible</option>
+                            <option value="pamantus" >Pamantus</option>
+                            <option value="toate" >Toate</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <label>Select multiplu(culoare):
+                        <select id="i_sel_multiplu">
+                            <option value="negru">negru</option>
+                            <option value="maro">maro</option>
+                            <option value="albastru">albastru</option>
+                            <option value="rosu">rosu</option>
+                            <option value="galben" selected>galben</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <label>Textarea:
+                        <textarea id="i_textarea">CINE STIE CE SE INTAMPLA</textarea>
+                    </label>                    
+                </div>
+                
+                <p>
+                <button id="sortCrescNume">Sorteaza crescator dupa nume</button>
+                <button id="sortDescrescNume">Sorteaza descrescator dupa nume</button>
+                </p>
+            </div>
+
+            <section id= "produse">
+                <div class="grid-produse">
+                    <% for( let prod of locals.produse) { %>
+                        <article class="produs">
+                            <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                            <div class="info-prod">
+                                <p class="pret">Pret: <span class="val-pret" style="color:red"><%- prod.pret%></span></p>
+                                <p class="dimensiune">Dimensiune: <span class="val-dimensiune" style="color:red"><%- prod.dimensiune%></span></p>
+                                <p class="culoare">Culoare: <span class="val-culoare" style="color:red"><%- prod.culoare%></span></p>
+                                <p class="caracteristici">Caracteristici: <span class="val-caracteristici" style="color:red"><%- prod.caracteristici%></span></p>
+                                <p class="curier">Curier: <span class="val-curier" style="color:red"><%- prod.curier%></span></p>
+                                <p class="descriere">Descriere: <span class="val-descriere" style="color:red"><%- prod.descriere%></span></p>
+                                <p class="livrare">livrare_postala: <span class="val-livrare" style="color:red"><%- prod.livrare_postala%></span></p>
+                                <p class="specie">Specie: <span class="val-specie" style="color:red"><%- prod.specie%></span></p>
+                                <p class="Accesorii">Accesorii: <span class="val-accesorii" style="color:red"><%- prod.accesorii%></span></p>
+                            </div>
+                            <p class="categorie">Categorie:<span class="val-categorie" style="color:red"><%- prod.categorie%></span></p>
+                            <figure>
+                                <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:30%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                            </figure>
+                        </article>
+                    <% }%>
+                </div>
+                <!-- <p><%- locals.produse.toString() %> </p> -->
+            </section>
+            
+            <%- include("../fragmente/footer") %>
+        </main>
+    </body>
+</html>

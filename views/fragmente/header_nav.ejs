@@ -1,0 +1,41 @@
+<header>
+    <h1>PETSHOP DE FURNICI</h1>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <button onclick="myFunction()">DARK MODE</button>
+</header>
+
+<nav>
+    <label id="hamburger" for="ch-menu">
+        <img src="resurse\imagini\threelines.png" alt="menu">
+    </label>
+    <input id="ch-menu" type="checkbox">
+        <ul class="myMenu">
+            <li><a href="index"><div><i class="fas fa-home fa-lg icon"></i><span class="home"> Acasa</span></div></a>
+                <ul>
+                    <li><a href="/index#layout_8">Fun Facts</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="/index#layout_2">Vanzare</a></li>
+                    <li><a href="/index#layout_4">Anunturi</a></li>
+                </ul>
+            </li>
+            <li><div><a href = "detalii" >Despre noi</a></div>
+                <ul>                        
+                    <li><a href="#">Prezentare</a></li>
+                    <li><a href="#">Ferme</a></li>
+                    <li><a href="#">Informatii</a></li>
+                    <li><a href="galerie">Galerie</a></li>
+                </ul>
+            </li>
+            <li>
+                <div><a href = "#" >Produse</a></div>
+                <ul>
+                    <li><a href="produse">Toate</a></li>
+                    <li><a href="produse?categ=furnici">Furnici</a></li>
+                    <li><a href="produse?categ=accesorii">Accesorii</a></li>
+                    <li><a href="produse?categ=soluri">Soluri</a></li>
+                </ul>
+            </li>
+            <li><a href="inregistrare">Inregistrare</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+</nav>
