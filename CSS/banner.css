@@ -1,0 +1,40 @@
+.banner
+{
+     border: 0.4rem solid var(--deschis);
+  visibility: hidden;
+     position: fixed;
+   width:100%;
+  bottom: 0px;
+   text-align: center;
+   background-color:var(--deschis);
+  animation: banner_style 6s linear;
+ }
+  
+  
+  
+@keyframes banner_style 
+{
+   0%{
+       color:--verde;
+       bottom:-100%;
+       visibility: visible;}
+       
+  25%{
+      color: var(--menta);
+      background-color: var(--deschis);
+       border-color: var(--deschis);
+       bottom:20px}
+
+  50%{
+      color:var(--negru);
+      background-color: var(--deschis);
+       border-color: var(--deschis);
+       bottom:0px}
+
+  100%{
+      color: var(--verde);
+      background-color: var(--deschis); 
+      border-color: var(--deschis);
+      bottom:0px;
+      visibility: hidden}
+}

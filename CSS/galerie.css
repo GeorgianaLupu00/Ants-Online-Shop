@@ -1,0 +1,63 @@
+#grid-galerie{
+    padding-left:var(--padding-intern);
+    padding-right:var(--padding-intern);
+    /* justify-items: center; */
+    display:grid;
+    grid-template-areas: "fig1 fig2 fig3"
+                          "fig4 fig5 fig6"
+                          "fig7 fig8 fig9";
+      width: 70vw;
+  }
+
+  #grid-galerie figure{
+    width: 10vw;
+    padding: 1.3vw;
+  }
+
+  #grid-galerie  figcaption{
+    display:block;
+    text-align:center;
+    padding-left: 70%;
+    font-size: 20px;
+    
+  }
+
+  #grid-galerie figure:nth-child(1){
+    grid-area: fig1;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(2){
+    grid-area: fig2;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(3){
+    grid-area: fig3;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(4){
+    grid-area: fig4;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(5){
+    grid-area: fig5;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(6){
+    grid-area: fig6;
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(7){
+    grid-area: fig7;
+    
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(8){
+    grid-area: fig8;
+    
+    /* width: 10px; */
+  }
+  #grid-galerie figure:nth-child(9){
+    grid-area: fig9;
+    
+    /* width: 10px; */
+  }

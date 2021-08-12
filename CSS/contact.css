@@ -1,0 +1,17 @@
+.pagina p{
+    background-color: var(--menta);
+    padding: 20px;
+    font-size: 20px;
+}
+
+body h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+body img {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    margin-left: 40px;
+}

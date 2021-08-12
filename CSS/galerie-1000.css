@@ -1,0 +1,13 @@
+#empty{
+    display:none;
+    grid-area: "x";
+}
+#grid-galerie{
+    width:100vw;
+    grid-template-areas:"fig1 fig2"
+                        "fig3 fig3"
+                        "fig4 fig5"
+                        "fig6 fig6"
+                        "fig7 fig8"
+                        "fig9 fig9";
+}
