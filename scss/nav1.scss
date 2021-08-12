@@ -1,0 +1,184 @@
+
+nav{
+    ul{
+        .myMenu{
+            ul{
+                display: none;
+                position:absolute;
+                width: 100%;
+            }
+        }
+    }
+}
+
+nav{
+    
+    height:3rem;
+    width:100%;
+    top:0;
+    padding: 0;
+    z-index:10;
+    position:sticky;
+}
+
+nav{
+    ul{
+        .myMenu>{
+            li{
+                float:left;
+                width:15%;
+                position:relative;
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        padding:0;
+        margin:0;
+    }
+}
+
+nav{
+    li{
+        padding:0;
+        margin:0;
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                text-align:center;
+                list-style-type: none;
+                background: var(--verde);
+                border: 1px solid var(--negru);
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                a{
+                    text-decoration: none;
+                    color:var(--negru);
+                    display: block;
+                    font-weight:bold;
+                    height:3rem;
+                    line-height:3rem;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                div{
+                    text-decoration: none;
+                    color: var(--negru);
+                    display: block;
+                    font-weight:bold;
+                    height:3rem;
+                    line-height:3rem;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                div::before{
+                    content: "";
+                    width: 0px;
+                    height: 10px;
+                    background: linear-gradient( 270deg, var(--deschis), var(--verde));
+                    position: absolute;
+                    left: 0;
+                    transition: .5s;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                div:hover::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu>{
+            li:hover>{
+                ul{
+                    display:block;
+                    animation-name: aparitie_meniu;
+                    animation-iteration-count:1;
+                    animation-duration:0.7s;
+                    animation-fill-mode:forwards;
+                    animation-timing-function:linear;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        .myMenu{
+            li{
+                ul{
+                    a:hover{
+                        transition: 0.5s;
+                        background-color: var(--deschis);
+                        color: var(--negru);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#hamburger{
+    display: none;
+    height: 3rem;
+}
+#ch-menu{
+    display: none ;
+}
+#hamburger img{
+    height:100%;
+    width:auto;
+  }
+
+  @keyframes aparitie_meniu{
+    0%{
+        transform:scaleY(0);
+        opacity:0;
+    } 
+	100%{
+        transform:scaleY(1);
+    	opacity:1;
+    }
+}
