@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Lupu Georgiana-Andreea">
+        <meta name="keywords" content="Furnici,Ferma,Informatii,Quiz">
+        <meta name="description" content="ANTS SHOP">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>PETSHOP SPECIAL DE FURNICI</title>
+        <link rel="icon" type="image/png" href="file:///C:/Users/Jeo/Desktop/android-chrome-192x192.png">
+        <link rel="stylesheet" href="resurse\CSS\index.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\calendar.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\tabel.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\nav1.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\banner.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\galerie.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\iframe.css" type="text/css" >
+        <link rel="stylesheet" href="resurse\CSS\general-1000.css" type="text/css" media="screen and (max-width:1000px)">
+        <link rel="stylesheet" href="resurse\CSS\general-500.css" type="text/css" media="screen and (max-width:500px)">
+        
+        <link rel="stylesheet" href="resurse\CSS\nav500.css" type="text/css" media="screen and (max-width:650px)" >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+        
+        <script src="scripts/figs.js"></script>
+
+        <link rel="stylesheet" href="resurse\CSS\galerie-1000.css" type="text/css" media="screen and (max-width:1000px)" >
+        <link rel="stylesheet" href="resurse\CSS\galerie-500.css" type="text/css" media="screen and (max-width:500px)">
+    </head>
+    
+    <body>
+        <header>
+            <h1>PETSHOP DE FURNICI</h1>
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        </header>
+
+        <nav>
+            <label id="hamburger" for="ch-menu">
+                <img src="file:///C:/Users/Jeo/Desktop/cursuri/cursuri%20an%202%20sem%202/TW/proiect/poze/threelines.png" alt="menu">
+            </label>
+            <input id="ch-menu" type="checkbox">
+                <ul class="myMenu">
+                    <li><div><i class="fas fa-home fa-lg icon"></i><span class="home"> Acasa</span></div>
+                        <ul>
+                            <li><a href="#layout_8">Fun Facts</a></li>
+                            <li><a href="#quiz">Quiz</a></li>
+                            <li><a href="#layout_2">Vanzare</a></li>
+                            <li><a href="#layout_4">Anunturi</a></li>
+                        </ul>
+                    </li>
+                    <li><div>Despre noi</div>
+                        <ul>                        
+                            <li><a href="#">Prezentare</a></li>
+                            <li><a href="#">Ferme</a></li>
+                            <li><a href="#">Informatii</a></li>
+                            <li><a href="#">Galerie</a></li>
+                        </ul>
+                    </li>
+                    <li><div>Magazin</div>
+                        <ul>
+                            <li><a href="#">Toate</a></li>
+                            <li><a href="#">Hrana</a></li>
+                            <li><a href="#">Ingrijire</a></li>
+                            <li><a href="#">Acvarii</a></li>
+                            <li><a href="#">Soluri</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inregistrare</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </nav>
+    
+        
+        <main>
+            <div class="container">
+
+                <div id="layout_1">
+                    <article>
+                        <h2>Prezentare Site</h2>
+                        <p class="intro"><br>Sperăm să vă bucurați de explorarea conținutului bogat de pe acest site.
+                        Aflați totul: de la care furnici sunt benefice grădinii <abbr title="dumneavoastra">dvs.</abbr>
+                        la cum să construiți o fermă de furnici și ce colegii au cele mai bune
+                        programe de <dfn>entomologie</dfn>(Ramură a zoologiei care se ocupă cu studiul insectelor) și
+                        <br>cum să controlați coloniile de furnici nedorite în și în jurul casei <abbr title="dumneavoastra">dvs.</abbr>
+                        </p>
+                    </article>
+
+                </div>
+
+                <div id="layout_2">
+                    <h2>Profit Lunar</h2>
+                    <div class="tabel_cont">
+                        <table id="tabel">
+                            <thead>
+
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Data</th>
+                                    <th>Specie</th>
+                                    <th>Nr. furnici</th>
+                                    <th>Pret per. 100 furnici</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>12.03.2021</td>
+                                    <td>Furnicile Citronella</td>
+                                    <td>300</td>
+                                    <td>20 lei</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>22</td>
+                                    <td>12.03.2021</td>
+                                    <td>Furnici Carpenter</td>
+                                    <td>2000</td>
+                                    <td>15 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>07</td>
+                                    <td>26.03.2021</td>
+                                    <td>Furnici Amazon</td>
+                                    <td>500</td>
+                                    <td>35 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>34</td>
+                                    <td>28.03.2021</td>
+                                    <td>Furnici Honeypot</td>
+                                    <td>200</td>
+                                    <td>20 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>23</td>
+                                    <td>28.03.2021</td>
+                                    <td>Furnicile Faraonului</td>
+                                    <td>700</td>
+                                    <td>50 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>05</td>
+                                    <td>29.03.2021</td>
+                                    <td>Furnicile Acrobat</td>
+                                    <td>600</td>
+                                    <td>25 lei</td>
+                                </tr>
+
+                                <tr>
+                                    <td>09</td>
+                                    <td>30.03.2021</td>
+                                    <td>Furnici Tesatoare</td>
+                                    <td>3000</td>
+                                    <td>70 lei</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Numar total de furnici</td>
+                                    <td>7380 furnici</td>
+                                
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Profil total</td>
+                                    <td>3175 lei</td>
+                                </tr>
+                            </tfoot>
+                        </table> 
+                    </div>
+                </div>
+
+                <div id="layout_3">
+                    <h2>Calendar</h2>
+				    
+                </div>
+
+                <div id="layout_4">
+                    <section id="anunturi">
+                        <h2>Anunțuri</h2>
+                        <p><time datetime="2020-07-05">5 iulie 2020</time> Am primit o noua specie de furnici tesatoare</p>
+                        <p><time datetime="2020-09-15">15 septembrie 2020</time> Toate comenzile de ACVARIU TIP B,
+                            inregistrate azi vin insotite de un musuroi artificial CADOU.</p>
+                        <p><time datetime="2020-12-20">20 decembrie 2020</time> Magazinul va ramane deschis doar 2 ore pe zi pana dupa sarbatori</p>
+                        <p><time datetime="2020-12-28">28 decembrie 2020</time> Nu inregistram comenzi in urmatoarele 3 zile</p>
+                        <p><time datetime="2021-01-07">7 ianuarie 2021</time>Avem un angajat nou, veniti sa il salutati! </p>
+                        <p><time datetime="2021-02-11">11 februarie 2021</time> Stoc nou de soluri negre!</p>
+                    </section>
+                </div>
+
+                <div id="layout_5">
+                    <h2>Lista de utilizatori online </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere cupiditate quis magni facilis totam cumque aspernatur omnis recusandae. Itaque, eaque est. Necessitatibus soluta ipsam accusamus temporibus sunt doloribus excepturi.</p>
+                </div>
+
+                <div id="layout_6">
+                    <h2>Date despre utilizator si statistici</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium voluptatibus eos molestias explicabo consequatur vitae non possimus ipsam repudiandae tenetur accusantium provident doloribus eius at ut ipsum, commodi dolores.</p>
+                </div>
+
+                <div id="layout_7">
+                    <h2>Date despre site și server</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod omnis culpa dolores repudiandae, ipsam corporis quos aliquid, iste aspernatur tempore suscipit natus labore! Ab sint vitae deserunt eos molestias quia.</p>
+                </div>
+
+                <div id="layout_8">
+                    <section>
+                        <h2>Fun Facts</h2>
+                            <p>Acesta este site-ul pentru toate furnicile. Indiferent dacă sunteți un pasionat de furnici,
+                            <mark>fermier</mark> de furnici sau pur și simplu curios de aceste insecte uimitoare, acesta este site-ul pentru <abbr title="dumneavoastra">dvs.</abbr>
+                            </p>
+                            <article><h3>Detalii</h3>
+                                <p>Furnicile sunt creaturi fascinante și benefice, dar uneori preferăm să le savurăm la distanță. În această secțiune</p>
+                                <p> veți vedea zeci de articole despre cum să controlați eficient furnicile în și în jurul casei dvs</p>
+                                <p>Dacă credeți că aveți nevoie de ajutor profesional pentru combaterea furnicilor și locuiți într-una din zonele de servicii</p>
+                                <p>din Statele Unite acoperite de Bulwark Exterminating, vă oferim acoperire. Verificați această hartă pentru a vedea dacă locuiți</p>
+                                <p>într-una din zonele de servicii Bulwark, apoi completați un formular de cerere de ofertă și un boom, un membru prietenos al</p>                                     
+                                <p>Bulwark Team vă va contacta în curând pentru a vă oferi un preț excelent pentru combaterea dăunătorilor la domiciliu.</p>
+                                <p>Și acum, așa cum am promis, iată câteva conținut minunat despre controlul furnicilor în și în jurul casei tale.</p>
+                                    <dl>
+                                        <dt><mark>Ferme de furnici</mark></dt>
+                                        <dd>Un acvariu în care în locul peștilor trăiesc furnici.
+                                            Prindeți furnicile din pădure și urmăriți ce viață minunată au.</dd>
+                                        <dt><mark>Locatie fizica ferme</mark></dt>
+                                        <dd>Garden Farm: Strada Dr. Iacob Felix nr. 3, București 011031</dd>
+                                    </dl>
+                                <hr class="bara"/>
+                                
+                                <div class="taburi">
+                                    <div class='row'>
+                                        <iframe name="video" src="https://www.youtube.com/embed/rW3CSMx2bX4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    </div>
+                                    <div class='row2'>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/rW3CSMx2bX4" target="video">Furnica1</a>
+                                        </div>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/7_e0CA_nhaE" target="video" >Furnica2</a>
+                                        </div>
+                                        <div class='flexboxitem'>
+                                            <a href="https://www.youtube.com/embed/8y5dOk8XiKA" target="video" >Furnica3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                    </section>
+                    <aside>
+                        <details>
+                            <summary>Oferte</summary>
+                            <p>Pentru a beneficia de oferta de 10% trebuie sa va abonati la newsletter:</p>
+                            <ol>
+                                <li><a href="abonare.html">Newsletter</a></li>
+                                <li><a href="reducere.html">Coduri de reducere</a></li>
+                                <li><a href="intrebari.html">Intrebari si raspunsuri</a></li>
+                            </ol>
+                        </details>
+                        <p>Sa facem cunostinta cu cele mai sociabile <mark>insecte!</mark></p>
+                        <div class="link">
+                            <a href="https://ants.com/" target="_blank">Visit ANTS.com!</a>
+                        </div>
+                    </aside>
+                </div>
+                <div class="gal">
+                    <figure id="fig1">
+                        <img src="1.jpg" alt="1">
+                        <figcaption>Fig.1</figcaption>
+                      </figure>
+                      <figure id="fig2">
+                        <img src="2.jpg" alt="2">
+                        <figcaption>Fig.2</figcaption>
+                      </figure>
+                      <figure  id="fig3">
+                        <img src="3.jpg" alt="3">
+                        <figcaption>Fig.3</figcaption>
+                      </figure>
+                      <figure id="fig4">
+                        <img src="4.jpg" alt="4">
+                        <figcaption>Fig.4</figcaption>
+                      </figure>
+                      <figure id="fig5">
+                        <img src="5.jpg" alt="5">
+                        <figcaption>Fig.5</figcaption>
+                      </figure>
+                      <figure id="fig6">
+                        <img src="6.jpg" alt="6">
+                        <figcaption>Fig.6</figcaption>
+                      </figure>
+                      <figure id="fig7">
+                        <img src="7.jpg" alt="7">
+                        <figcaption>Fig.7</figcaption>
+                      </figure>
+                      <figure id="fig8">
+                        <img src="8.jpg" alt="8">
+                        <figcaption>Fig.8</figcaption>
+                      </figure>
+                      <figure id="fig9">
+                        <img src="9.jpg" alt="9">
+                        <figcaption>Fig.9</figcaption>
+                      </figure>
+                      
+                </div>
+
+                
+                <div id="foot">
+                    <footer>
+                        <section>
+                            <a href="#" title="mergi sus" id="link-top"><div id="sageata"></div></a>
+                            <p></p>
+                            <address>Scris de:<b>Lupu Georgiana-Andreea</b> <br>Adresa de email:  
+                            <a href="mailto:sabrinafurnicuta@gmail.com">sabrinafurnicuta@gmail.com</a><br>Numar de telefon:  
+                            <a href="tel:0763945768">0763945768 </a>
+                            <p>Adresa:Strada Izvor,nr. 34, sector 4, Bucuresti</p>
+                            </address>  
+                        </section>
+                        <p><small>Copyright &copy;2020 Lupu Georgiana</small></p>
+                        <p>Creat <time datetime="2020-03-06 20:00">Vineri</time></p>
+                    </footer>
+                </div>
+            </div>
+            
+            <div class="banner">
+                Acesta este un proiect scolar
+            </div>
+
+        </main>
+
+    </body>
+</html>
